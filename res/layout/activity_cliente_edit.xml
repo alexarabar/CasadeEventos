@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/activity_medico_edit"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingBottom="@dimen/activity_vertical_margin"
+android:paddingLeft="@dimen/activity_horizontal_margin"
+android:paddingRight="@dimen/activity_horizontal_margin"
+android:paddingTop="@dimen/activity_vertical_margin"
+android:background="@color/light_yellow"
+tools:context="br.com.alexandrebarboza.casadeeventos.ClienteEditActivity">
+android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_yellow"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_razao_social_cliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/label_razao_social_cliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="@string/str_razao_social"
+            android:textAppearance="@android:style/TextAppearance.Medium" />
+
+        <EditText
+            android:id="@+id/edit_razao_social_cliente2"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_default_white"
+            android:elevation="6dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:maxLength="45"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_cnpj_cliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/label_cnpj_cliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="5dp"
+            android:text="@string/str_cnpj"
+            android:textAppearance="@android:style/TextAppearance.Medium" />
+
+        <EditText
+            android:id="@+id/edit_cnpj_cliente"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_default_white"
+            android:elevation="6dp"
+            android:ems="10"
+            android:inputType="number"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:maxLength="10"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_outer_contrato_cliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/label_contrato_cliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="0dp"
+            android:text="@string/str_contrato"
+            android:textColor="@color/black"
+            android:textAppearance="@android:style/TextAppearance.Small" />
+
+        <LinearLayout
+            android:id="@+id/layout_inner_contrato_cliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinner_contrato_cliente"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/edit_default_white"
+                android:elevation="6dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/button_adicionar_contrato_cliente"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="7.5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="2.5dp"
+                android:elevation="3dp"
+                android:background="@drawable/bt_operation"
+                android:src="@drawable/ic_insert" />
+
+            <ImageButton
+                android:id="@+id/button_alterar_contrato_cliente"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="7.5dp"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="2.5dp"
+                android:elevation="3dp"
+                android:background="@drawable/bt_operation"
+                android:enabled="false"
+                android:src="@drawable/ic_update_disabled" />
+
+            <ImageButton
+                android:id="@+id/button_excluir_contrato_cliente"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="7.5dp"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="5dp"
+                android:elevation="3dp"
+                android:background="@drawable/bt_operation"
+                android:enabled="false"
+                android:src="@drawable/ic_delete_disabled" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/label_telefone_cliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="2.5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="0dp"
+            android:text="@string/str_telefone"
+            android:textColor="@color/black"
+            android:textAppearance="@android:style/TextAppearance.Small" />
+
+        <LinearLayout
+            android:id="@+id/layout_telefone_cliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinner_telefone_cliente"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/edit_default_white"
+                android:elevation="6dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/button_adicionar_telefone_cliente"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="7.5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="2.5dp"
+                android:elevation="3dp"
+                android:background="@drawable/bt_operation"
+                android:src="@drawable/ic_insert" />
+
+            <ImageButton
+                android:id="@+id/button_alterar_telefone_cliente"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="7.5dp"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="2.5dp"
+                android:elevation="3dp"
+                android:background="@drawable/bt_operation"
+                android:enabled="false"
+                android:src="@drawable/ic_update_disabled" />
+
+            <ImageButton
+                android:id="@+id/button_excluir_telefone_cliente"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="7.5dp"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="5dp"
+                android:elevation="3dp"
+                android:background="@drawable/bt_operation"
+                android:enabled="false"
+                android:src="@drawable/ic_delete_disabled" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/label_email_cliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="2.5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="0dp"
+            android:text="@string/str_email"
+            android:textColor="@color/black"
+            android:textAppearance="@android:style/TextAppearance.Small" />
+
+        <LinearLayout
+            android:id="@+id/layout_email_cliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinner_email_cliente"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/edit_default_white"
+                android:elevation="6dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/button_adicionar_email_cliente"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="7.5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="2.5dp"
+                android:elevation="3dp"
+                android:background="@drawable/bt_operation"
+                android:src="@drawable/ic_insert" />
+
+            <ImageButton
+                android:id="@+id/button_alterar_email_cliente"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="7.5dp"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="2.5dp"
+                android:elevation="3dp"
+                android:background="@drawable/bt_operation"
+                android:enabled="false"
+                android:src="@drawable/ic_update_disabled" />
+
+            <ImageButton
+                android:id="@+id/button_excluir_email_cliente"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="7.5dp"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="5dp"
+                android:elevation="3dp"
+                android:background="@drawable/bt_operation"
+                android:enabled="false"
+                android:src="@drawable/ic_delete_disabled" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/label_endereco_cliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="2.5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="0dp"
+            android:text="@string/str_endereco"
+            android:textColor="@color/black"
+            android:textAppearance="@android:style/TextAppearance.Small" />
+
+        <LinearLayout
+            android:id="@+id/layout_endereco_cliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinner_endereco_cliente"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/edit_default_white"
+                android:elevation="6dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/button_adicionar_endereco_cliente"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="7.5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="2.5dp"
+                android:background="@drawable/bt_operation"
+                android:elevation="3dp"
+                android:src="@drawable/ic_insert" />
+
+            <ImageButton
+                android:id="@+id/button_alterar_endereco_cliente"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="7.5dp"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="2.55dp"
+                android:background="@drawable/bt_operation"
+                android:enabled="false"
+                android:elevation="3dp"
+                android:src="@drawable/ic_update_disabled" />
+
+            <ImageButton
+                android:id="@+id/button_excluir_endereco_cliente"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="7.5dp"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/bt_operation"
+                android:enabled="false"
+                android:elevation="3dp"
+                android:src="@drawable/ic_delete_disabled" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</LinearLayout>
